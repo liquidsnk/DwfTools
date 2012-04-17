@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30F54A5F-7C45-4ED0-A5D3-CA7C19A7B81F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DwfTools</RootNamespace>
+    <AssemblyName>DwfTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoordinatesType.cs" />
+    <Compile Include="Opcodes\ExtendedAscii\EndOfDwf.cs" />
+    <Compile Include="Opcodes\ExtendedAscii\SetUrlLink.cs" />
+    <Compile Include="Opcodes\IExtendedAsciiOpcodeFactory.cs" />
+    <Compile Include="Opcodes\ISingleByteOpcodeFactory.cs" />
+    <Compile Include="OpcodeFactory.cs" />
+    <Compile Include="Opcodes\UnrecognizedOpcode.cs" />
+    <Compile Include="Opcodes\SingleByte\SetLayer.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawCirclePartial.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolytriangleShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawTextBasic.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolytriangleLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawCircleLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolylineLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolymarkerShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolymarkerLong.cs" />
+    <Compile Include="Opcodes\SingleByte\SetFillModeOff.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawEllipse.cs" />
+    <Compile Include="Opcodes\SingleByte\SetColorIndex.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolyBezierCurve.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolylinePolygonReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawLineReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\SetCurrentPoint.cs" />
+    <Compile Include="Opcodes\SingleByte\SetObjectNodeShort.cs" />
+    <Compile Include="Opcodes\SingleByte\SetMarkerSize.cs" />
+    <Compile Include="Opcodes\SingleByte\SetVisibillityOff.cs" />
+    <Compile Include="Opcodes\SingleByte\SetColorIndexReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawCircleShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawCircleReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawContourSetLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawContourSetShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawEllipseReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawGouraudPolytriangleLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawGouraudPolytriangleShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawLineLong.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawLineShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawLineMultiple.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolylineShort.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolymarkerReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawPolytriangleReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawTextAdvanced.cs" />
+    <Compile Include="Opcodes\SingleByte\DrawTexturedPolytriangle.cs" />
+    <Compile Include="IOpcode.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Opcodes\SingleByte\SetColorRgba.cs" />
+    <Compile Include="Opcodes\SingleByte\SetFillModeOn.cs" />
+    <Compile Include="Opcodes\SingleByte\SetFont.cs" />
+    <Compile Include="Opcodes\SingleByte\SetLineWeight.cs" />
+    <Compile Include="Opcodes\SingleByte\SetMarkerGlyphReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\SetMarkerSizeReadable.cs" />
+    <Compile Include="Opcodes\SingleByte\SetObjectNodeNext.cs" />
+    <Compile Include="Opcodes\SingleByte\SetObjectNodeLong.cs" />
+    <Compile Include="Opcodes\SingleByte\SetVisibillityOn.cs" />
+    <Compile Include="Opcodes\SingleByte\SetMarkerGlyph.cs" />
+    <Compile Include="DefaultColorMap.cs" />
+    <Compile Include="W2dParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Opcodes\ExtendedBinary\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="svgpan.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
